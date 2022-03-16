@@ -1,0 +1,183 @@
+/* Base */
+
+// Colours
+:root {
+
+    // Primary
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%); // Payment button
+
+    // Neutral
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Media Query break points */
+$bp-desktop-max: 400px; // desktop view: card 350px + 50px left and right margin
+$card-width-mobile: 325px; // mobile view: card and bg-header-card 325px, left and right margin 25px. Total width: 325px + 50px = 375px.
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px (10px/16px = 62.5%)
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background: {
+    color: var(--pale-blue);
+    image: url(../images/pattern-background-mobile.svg);
+    repeat: no-repeat; 
+  }; 
+  font: {
+    family: "Red Hat Display";
+    size: 1.6rem;
+    weight:500;
+  }
+}
+
+
+/* Components */
+
+/* Card */
+
+.card {
+    
+  display: flex;
+  width: 32.5rem;
+  min-height: 57.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rem 0rem 3rem 0;
+  background-color: white;
+  
+  background: {
+    image: url(../images/illustration-hero.svg);
+    size: 32.5rem 16rem;
+    repeat:no-repeat;
+    color: white;
+  }
+  
+
+  // Media queries
+//   @media only screen and (max-width: $bp-desktop-max) {
+//     width: $card-width-mobile;
+//     background-size: $card-width-mobile 140px;
+//   }
+
+  border-radius: 10px;
+
+    
+
+    &__title {
+        margin: 3.5rem 2.5rem 1.5rem 2.5rem;
+        font: {
+            size: 2.2rem;
+            weight: 700;
+        }
+        color: var(--dark-blue);
+    }
+
+    &__text {
+        font: {
+            size: 1.5rem;
+        }
+        line-height: 2.4rem;
+        color: var(--desaturated-blue);
+        margin-bottom: 2.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__annual-plan {
+        display: grid;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 27.5rem;
+        padding: 1.5rem;
+        background-color: var(--very-pale-blue);
+        border-radius: 10px;
+
+        .icon {
+          /* grid-row-start/grid-column-start / grid-row-end/grid-column-end */
+          grid-area: 1/1 / 3/2;
+        }
+
+        .title {
+          grid-area: 1/2 / 2/3;
+          align-self: end;
+          font: {
+            size: 1.4rem;
+            weight: 700;
+          }
+        }
+
+        .price {
+          grid-area: 2/2 / 3/3;
+          align-self: start;
+          font: {
+            size: 1.3rem;  
+          }
+          color: var(--desaturated-blue);
+        }
+
+        .link {
+          grid-area: 1/3 / 3/4;
+          font: {
+            size: 1.3rem;
+            weight: 700;
+          }
+        }
+
+    }
+
+    &__payment-button {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      width: 27.5rem;
+      border-radius: 10px;
+      background-color: var(--bright-blue);
+      color: var(--very-pale-blue);
+      // box-shadow: x-verschuiving y-verschuiving vervagingsstraal verspreiding kleur
+      box-shadow: 0px 20px 10px 0px hsl(245, 75%, 94%);
+      font: {
+        size: 1.6rem;
+        weight: 700;
+      }
+
+    }
+
+    &__cancel-link {
+      font: {
+        size: 1.5rem;
+        weight: 700;
+      }
+      color: var(--desaturated-blue);        
+    }
+
+    &__title, &__text, &__annual-plan, &__payment-button, &__cancel-link {
+        text-align: center;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
