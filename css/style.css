@@ -39,10 +39,13 @@ body {
   font-family: "Red Hat Display";
   font-size: 1.6rem;
   font-weight: 500;
+  margin: 7rem auto;
 }
-@media only screen and (max-width: 645px) {
+@media only screen and (min-width: 645px) {
   body {
     background-image: url(../images/pattern-background-desktop.svg);
+    repeat: no-repeat;
+    margin: 10rem auto;
   }
 }
 
@@ -65,9 +68,9 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card {
-    width: 595px;
+    width: 450px;
     min-height: 70rem;
-    background-size: 59.5rem 22rem;
+    background-size: 45rem 22rem;
     padding: 22rem 0rem 5rem 0;
   }
 }
@@ -93,10 +96,10 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card__text {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 3rem;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 .card__annual-plan {
@@ -147,7 +150,7 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
 }
-.card__annual-plan .link a:hover {
+.card__annual-plan .link:hover {
   color: #918bc6;
   text-decoration: none;
 }
