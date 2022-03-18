@@ -45,6 +45,7 @@ body {
   background: {
     color: var(--pale-blue);
     image: url(../images/pattern-background-mobile.svg);
+    position: top center;
     repeat: no-repeat; 
   }; 
   font: {
@@ -52,14 +53,12 @@ body {
     size: 1.6rem;
     weight:500;
   }
-  margin: 7rem auto;
 
   // Media queries
   @media only screen and (min-width: $bp-desktop-min) {
-    background-image: url(../images/pattern-background-desktop.svg);
-    repeat: no-repeat;
-    margin: 10rem auto;
-
+    background: {
+      image: url(../images/pattern-background-desktop.svg);      
+    }
   }
 }
 
@@ -86,7 +85,7 @@ body {
     color: white;
   }
 
-  border-radius: 10px;
+  border-radius: 20px;
 
   // Media queries
   @media only screen and (min-width: $bp-desktop-min) {
@@ -109,7 +108,7 @@ body {
         color: var(--dark-blue);
 
         @media only screen and (min-width: $bp-desktop-min) {
-          margin: 5rem 2.5rem 2rem 2.5rem;
+          margin: 3.5rem 2.5rem 2rem 2.5rem;
           font-size: 3rem;
         }
     }
@@ -120,13 +119,13 @@ body {
         }
         line-height: 2.4rem;
         color: var(--desaturated-blue);
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
 
         @media only screen and (min-width: $bp-desktop-min) {
           font-size: 1.7rem;
-          line-height: 3rem;
+          line-height: 2.8rem;
           padding-left: 4rem;
           padding-right: 4rem;
         }
@@ -161,7 +160,7 @@ body {
             weight: 700;
           }
           @media only screen and (min-width: $bp-desktop-min) {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
           }
         }
 
@@ -174,7 +173,7 @@ body {
           color: var(--desaturated-blue);
 
           @media only screen and (min-width: $bp-desktop-min) {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
           }
         }
 
@@ -191,7 +190,7 @@ body {
           }
 
           @media only screen and (min-width: $bp-desktop-min) {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           }
         }
 
@@ -209,7 +208,7 @@ body {
       // box-shadow: x-verschuiving y-verschuiving vervagingsstraal verspreiding kleur
       box-shadow: 0px 20px 10px 0px hsl(245, 75%, 94%);
       font: {
-        size: 1.6rem;
+        size: 1.5rem;
         weight: 700;
       }
 
@@ -218,7 +217,6 @@ body {
     }
     @media only screen and (min-width: $bp-desktop-min) {
       margin-top: 3rem;
-      padding: 2rem;
       width: 35rem;
     }
 

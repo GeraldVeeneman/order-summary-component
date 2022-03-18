@@ -35,17 +35,15 @@ body {
   flex-direction: row;
   background-color: var(--pale-blue);
   background-image: url(../images/pattern-background-mobile.svg);
+  background-position: top center;
   background-repeat: no-repeat;
   font-family: "Red Hat Display";
   font-size: 1.6rem;
   font-weight: 500;
-  margin: 7rem auto;
 }
 @media only screen and (min-width: 645px) {
   body {
     background-image: url(../images/pattern-background-desktop.svg);
-    repeat: no-repeat;
-    margin: 10rem auto;
   }
 }
 
@@ -64,7 +62,7 @@ body {
   background-size: 32.5rem 16rem;
   background-repeat: no-repeat;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 @media only screen and (min-width: 645px) {
   .card {
@@ -82,7 +80,7 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card__title {
-    margin: 5rem 2.5rem 2rem 2.5rem;
+    margin: 3.5rem 2.5rem 2rem 2.5rem;
     font-size: 3rem;
   }
 }
@@ -90,14 +88,14 @@ body {
   font-size: 1.5rem;
   line-height: 2.4rem;
   color: var(--desaturated-blue);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 @media only screen and (min-width: 645px) {
   .card__text {
     font-size: 1.7rem;
-    line-height: 3rem;
+    line-height: 2.8rem;
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -130,7 +128,7 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card__annual-plan .title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 .card__annual-plan .price {
@@ -141,7 +139,7 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card__annual-plan .price {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 .card__annual-plan .link {
@@ -156,7 +154,7 @@ body {
 }
 @media only screen and (min-width: 645px) {
   .card__annual-plan .link {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 .card__payment-button {
@@ -169,7 +167,7 @@ body {
   background-color: var(--bright-blue);
   color: var(--very-pale-blue);
   box-shadow: 0px 20px 10px 0px #e6e4fb;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .card__payment-button:hover {
@@ -178,7 +176,6 @@ body {
 @media only screen and (min-width: 645px) {
   .card__payment-button {
     margin-top: 3rem;
-    padding: 2rem;
     width: 35rem;
   }
 }
